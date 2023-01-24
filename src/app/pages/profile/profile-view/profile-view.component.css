@@ -18,7 +18,7 @@
 
 .profile-image-item .btn-Profile svg{
     @apply  w-5 h-5 ;
-    @apply  dark:fill-indigo-500;
+   
 }
 .profile-image-input .profile-item svg {
     @apply w-5 h-5 mt-1
@@ -41,20 +41,20 @@
 }
 
 .btn-Profile{
-    @apply  flex flex-row-reverse font-bold  rounded-full bg-slate-100 text-indigo-500 cursor-pointer hover:bg-blue-700 hover:text-white;
-    @apply  dark:hover:bg-white dark:hover:text-white;
-    @apply  focus-within:hover:text-white
+    @apply  flex flex-row-reverse font-bold  rounded-full bg-slate-100 text-slate-500 cursor-pointer hover:bg-blue-700 hover:text-white;
+    @apply  dark:hover:bg-slate-800 dark:bg-slate-700 dark:border-sky-500 dark:ring-1 dark:text-white;
+    /* @apply  focus-within:hover:text-white */
 
 }
 
 
 .text-input{
-    @apply w-full text-indigo-500   font-medium  text-sm p-2 rounded-xl bg-slate-100  outline-none ; 
-    @apply focus:bg-white  focus:shadow-lg focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-pink-500 invalid:text-pink-600 ;
-    @apply focus:invalid:border-pink-500 focus:invalid:ring-pink-500 ;
+    @apply w-full text-indigo-500  font-medium  text-sm p-2 rounded-xl bg-slate-100  outline-none ; 
+    @apply focus:bg-white  focus:shadow-md focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 ;
+    /* invalid:border-pink-500 invalid:text-pink-600 ; @apply focus:invalid:border-pink-500 focus:invalid:ring-pink-500 ; */
     @apply shadow-sm ;
     @apply placeholder:placeholder-slate-400 placeholder:text-base;
-    @apply dark:focus:shadow-lg dark:bg-slate-900 dark:outline dark:focus:bg-slate-700
+    @apply dark:focus:shadow-current  dark:focus:shadow-sm dark:bg-slate-800 dark:outline  dark:focus:bg-slate-900 dark:border-slate-200 dark:focus:border-sky-500 dark:ring-1
     
 
 }
