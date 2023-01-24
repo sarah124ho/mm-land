@@ -1,0 +1,21 @@
+
+
+<section class='container  max-w-sm mx-auto pb-5 '>
+ <img class="object-center -z-0" src="../../../assets/images/auth-header1.png " alt="">  
+ <div class="flex max-w-xs px-2 py-4 mx-auto">
+  <div class="flex space-x-1 bg-blue-50  w-full rounded-full"   >
+    <div class="tab-list flex">
+      <button  [ngClass]="(registerMode ? 'selected' : '') " role="tab" (click)="changeMode()">ورود</button>
+      <button  [ngClass]="(registerMode ? '' : 'selected')" role="tab" (click)="changeMode()">ثبت نام</button>
+    </div>
+  </div>
+ </div>
+ <h6 class='text-center text-slate-400 text-xs font-medium relative top-5'>لطفا شماره موبایل خود را وارد کنید</h6>
+
+ <div class="mobileInput">
+ 
+    <app-mobileinput></app-mobileinput>
+    <button class="btn-tab" >دریافت رمز یکبار مصرف</button>
+ </div>
+  
+</section>

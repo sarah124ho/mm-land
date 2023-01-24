@@ -1,0 +1,23 @@
+.header {
+    @apply fixed py-2 pr-3 pl-3 sm:px-[128px] bg-slate-50 dark:bg-slate-800 inset-x-0 z-10;
+    @apply h-14 flex items-center justify-center top-0 space-x-2;
+    @apply shadow-md shadow-slate-900/5 dark:shadow-black/50;
+}
+
+.header .nav-link {
+    @apply min-w-[48px] flex items-center;
+}
+
+.header .icon-button {
+    @apply flex items-center justify-center rounded-full transition-all;
+    @apply bg-slate-100 hover:bg-white hover:text-green-500;
+    @apply dark:bg-slate-700 dark:hover:bg-slate-900 dark:hover:text-lime-500;
+}
+
+.header .icon-button svg {
+    @apply h-5 w-5 m-2;
+}
+
+.header .logo img {
+    @apply w-10 h-10;
+}

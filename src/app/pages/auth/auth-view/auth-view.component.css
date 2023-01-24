@@ -1,0 +1,42 @@
+.auth-container {
+    @apply rounded-2xl p-3 bg-white/90 dark:bg-slate-800/90 mx-auto max-w-xs w-full space-y-6;
+    @apply border border-slate-200 dark:border-slate-700 shadow-xl dark:shadow-black;
+}
+
+.auth-tabs {
+    @apply px-4 mx-auto flex items-center justify-evenly space-x-1 w-full max-w-xs;
+}
+
+.auth-tabs button {
+    @apply px-3 pt-1 text-blue-500 dark:text-white w-full relative rounded-xl pb-3;
+    @apply hover:bg-blue-600 hover:text-white text-lg hover:shadow-lg;
+    @apply hover:shadow-sky-500/25 dark:hover:shadow-blue-500/30;
+    transition: all 0.3s;
+}
+.auth-tabs button::before {
+    content: " ";
+    position: absolute;
+    width: 0px;
+    height: 3px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    left: 50%;
+    bottom: 4px;
+    transition: all 0.3s;
+}
+
+
+.auth-tabs button:hover::before {
+    width: 32px;
+    margin-left: -16px;
+}
+
+.auth-tabs button.selected:before {
+    width: 58px;
+    margin-left: -29px;
+    @apply bg-blue-500;
+}
+
+.auth-tabs button.selected:hover::before {
+    @apply bg-white;
+}

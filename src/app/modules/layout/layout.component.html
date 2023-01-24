@@ -1,0 +1,9 @@
+<app-header-nav (langClick)="onLanguageClick()"></app-header-nav>
+<app-language-modal [show]="showLanguage" (onClose)="onLanguageCancel()"></app-language-modal>
+<main class="page">
+    <ng-content></ng-content>
+</main>
+
+<app-navbar></app-navbar>
+<app-footer></app-footer>
+

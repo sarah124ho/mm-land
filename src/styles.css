@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    /* touch-action: manipulation;
+    -ms-touch-action: manipulation;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+ } 
+
+body {
+    @apply bg-white dark:bg-slate-900;
+    @apply text-slate-600 dark:text-slate-300;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    @apply bg-slate-50;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    width: 6px;
+    @apply bg-white dark:bg-slate-900;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    @apply bg-rose-400;
+    border-radius: 8px;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-rose-500;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+/* Modal And Alert */
+
+.alert-container {
+    @apply fixed inset-0 flex items-center justify-center bg-slate-300/50 dark:bg-slate-900/75;
+    @apply z-50;
+}
+
+.alert {
+    @apply mx-3 max-w-sm p-3 rounded-xl container;
+    @apply bg-white dark:bg-slate-800 shadow-xl;
+}
+
+.alert.danger .alert-body {
+    @apply text-rose-500;
+}
+
+.alert.success .alert-body {
+    @apply text-green-600 dark:text-lime-500;
+}
+
+.alert.info .alert-body {
+    @apply text-slate-500 dark:text-white;
+}
+
+.alert.warning .alert-body {
+    @apply text-amber-600 dark:text-amber-500;
+}
+
+.alert .actions {
+    @apply flex items-center justify-evenly w-full space-x-2;
+}
+
+.alert .actions button {
+    @apply flex items-center justify-center flex-grow rounded-xl transition-all;
+    @apply p-3;
+}
+
+.alert .actions .cancel {
+    @apply bg-transparent hover:bg-slate-100 dark:hover:bg-slate-700 text-white;
+    @apply text-sm sm:text-base text-slate-400 hover:text-rose-500;
+}
+
+.alert .actions .confirm {
+    @apply bg-green-500 hover:bg-green-600 text-white;
+    @apply text-sm sm:text-base;
+}
+
+.alert .close {
+    @apply rounded-full bg-slate-50 dark:bg-slate-700 transition-all;
+    @apply hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-rose-500;
+}
+
+.alert .close svg {
+    @apply m-1 w-5 h-5;
+}
+
+/* PAGE ---------------*/
+.page {
+    @apply max-w-6xl mx-auto px-1 mt-1 pt-14 pb-3 xl:w-2/3;
+}
+
+/* Text Input ---------------*/
+.input-text {
+    @apply font-medium outline-none rounded-xl ring-1;
+    @apply transition-all focus:shadow-md;
+    @apply ring-slate-200 focus:ring-blue-500 bg-slate-50 focus:bg-white text-slate-500;
+    @apply dark:ring-slate-700 dark:focus:ring-blue-500 dark:bg-slate-800;
+    @apply dark:focus:bg-slate-900 dark:text-slate-200;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.classtitle{
+    @apply font-bold ;
+    @apply mr-2 mt-2 mb-2; 
+}
+.classinput{
+    @apply w-full text-indigo-500   font-medium  text-sm p-2 rounded-xl bg-slate-100 ; 
+    @apply focus:bg-white  focus:shadow-md focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-pink-500 invalid:text-pink-600 ;
+    @apply focus:invalid:border-pink-500 focus:invalid:ring-pink-500 ;
+    @apply shadow-sm placeholder-slate-400
+   
+}
+.classError{
+    @apply text-right text-red-500 text-sm mr-2 mt-2 mb-2
+}
+

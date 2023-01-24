@@ -1,0 +1,20 @@
+
+.tab-list button {
+    @apply rounded-full text-center object-contain border-slate-300 bg-blue-50  w-full max-w-xs rounded-full w-40 h-10 ;
+    @apply text-slate-500 hover:text-indigo-500 font-bold ;
+}
+
+.tab-list button.selected {
+    @apply bg-indigo-500 text-white shadow-md shadow-indigo-500/20;
+    @apply text-slate-500 text-white ;
+  } 
+
+.btn-tab {
+    @apply bg-green-500  relative left-2 rounded-full text-white font-bold from-green-50 text-center relative py-2.5 px-1 ;
+    @apply hover:shadow-lg hover:shadow-green-500/50 transition-all 
+
+  }
+.mobileInput{
+  @apply flex flex-col top-5 max-w-xs relative justify-center pt-1 mx-auto space-y-4 pb-16
+}  
+  

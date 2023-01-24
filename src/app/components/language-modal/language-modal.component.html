@@ -1,0 +1,10 @@
+<div class="alert-container" *ngIf="showSub.getValue()">
+    <div class="alert success fade" [ngClass]="showSub.getValue() ? 'show' : ''">
+        <div class="alert-body">
+
+        </div>
+        <div class="actions">
+            <button class="cancel" (click)="onCloseClick()">انصراف</button>
+        </div>
+    </div>
+</div>

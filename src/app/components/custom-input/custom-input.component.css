@@ -1,0 +1,7 @@
+
+.classinput{
+    @apply w-full text-indigo-500   font-medium  text-sm p-2 rounded-xl bg-slate-100 ; 
+    @apply focus:bg-white  focus:shadow-md focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-pink-500 invalid:text-pink-600 ;
+    @apply focus:invalid:border-pink-500 focus:invalid:ring-pink-500 ;
+    @apply shadow-sm placeholder-slate-400
+}

@@ -1,0 +1,42 @@
+
+
+.footer-section{
+    @apply  w-full ; 
+   
+      
+}
+
+
+.footer-menu-container {
+    @apply text-xs  leading-4 text-sm md:flex flex-row-reverse space-x-reverse items-start;
+    @apply flex-grow md:mt-2 ;
+ 
+  
+
+}
+.footer-menu-container li:first-child {
+    @apply pt-1 pb-1 text-xl font-bold md:hidden;
+   
+} 
+.footer-menu-container li:last-child{
+    @apply md:border-l-0
+}
+
+
+.footer-menu-container li {
+     
+ @apply px-2 md:border-l md:border-l-slate-200 border-dashed px-2;
+
+} 
+.footer-menu-container li a {
+    @apply  hover:text-green-500 transition-all
+    
+} 
+
+.social-links {
+    @apply flex flex-row items-center justify-between space-x-2;
+}
+.social-links button {
+    @apply rounded-full bg-sky-400  w-8 h-8;
+    @apply hover:bg-sky-500 hover:scale-95
+}

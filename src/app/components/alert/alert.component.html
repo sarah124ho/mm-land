@@ -1,0 +1,24 @@
+<div class="alert-container" *ngIf="alerts.length > 0">
+    <div *ngFor="let alert of alerts" class="{{cssClass(alert)}}">
+        <div class="flex items-center justify-between">
+            <button class="close" (click)="removeAlert(alert)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="text-sm irsans-b rtl-dir text-right flex-grow">
+                {{alert.title}}
+            </div>
+        </div>
+
+        <div class="py-4 px-3 rtl-dir text-justify text-sm alert-body">
+            {{alert.message}}
+        </div>
+
+        <div class="actions" *ngIf="alert.confirm">
+            <button class="confirm" (click)="onConfirm(alert.id)">{{alert.confirm}}</button>
+            <button class="cancel" (click)="removeAlert(alert)">انصراف</button>
+        </div>
+    </div>
+</div>

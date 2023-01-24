@@ -1,0 +1,33 @@
+<section class="max-w-2xl mx-auto py-8 px-3 flex flex-col">
+    <div class="auth-container">
+        <div class="auth-tabs w-full">
+            <button [ngClass]="(registerMode ? 'selected' : '')"(click)="changeMode()">ثبت نام</button>
+            <button [ngClass]="(registerMode ? '' : 'selected')" (click)="changeMode()">ورود</button>
+        </div>
+
+        <h6 class="w-full text-center text-xs">لطفا شماره همراه خود را وارد نمایید</h6>
+
+        <div class="relative px-6">
+            <input class="input-text w-full px-3 text-center py-2 tracking-widest text-xl" type="tel" />
+        </div>
+
+        <button class="button indigo w-full" (click)="getVerificationCode()"
+            [ngClass]="(mobileIsOK ? '' : 'opacity-50 pointer-events-none')">
+            دریافت رمز یکبار مصرف
+        </button>
+
+        <div class="" [ngSwitch]="mobileIsOK">
+            <a [routerLink]="['/verify', mobile]" class="button row small slate w-full" *ngSwitchCase="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                </svg>
+                <div class="">رمز یکبار مصرف را دارم</div>
+            </a>
+        </div>
+
+        <div class="w-full text-rose-500 text-xs irsans-m text-center rtl-dir">{{error}}</div>
+
+    </div>
+</section>
