@@ -1,0 +1,60 @@
+
+/* import css swiper  */
+
+@import '~swiper/swiper.min.css';
+@import '~swiper/modules/navigation/navigation.min.css';
+@import '~swiper/modules/pagination/pagination.min.css';
+
+.swiper {
+    @apply w-full sm:rounded-md
+
+    
+}
+
+.swiper-slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  margin: auto;
+  border-radius: 70px;
+}
+
+.image_slid{
+  @apply object-cover;
+}
+.Icon{
+  @apply flex flex-row ;
+}
+.Icon:hover .heart-svg{
+  fill:red;
+  stroke: red
+}
+
+.heart-svg{
+  @apply w-5 h-5 mr-1;
+
+}
+.Icon h6{
+  @apply text-sm;
+}
+
+.caption{
+   /* @apply px-1 inline-block align-text-bottom text-sm text-justify  font-normal;
+   @apply !rtl  ; */
+  direction:rtl !important;
+  text-align: justify;
+}
+.container-post{
+  @apply flex flex-col bg-white  dark:bg-slate-900   dark:ring-1 dark:ring-sky-500 w-full sm:rounded-xl; 
+  @apply sm:shadow-[0px_0px_20px_10px_rgba(100,116,139,0.10)] items-center justify-center mx-auto;
+}
+.header-slider{
+  @apply flex flex-row-reverse justify-between space-x-4 space-x-reverse w-full items-center p-3;
+ }
+.chevron-circle{
+  @apply w-10 h-10 rounded-full bg-white ring ring-indigo-100 dark:bg-slate-800;
+  @apply dark:ring-sky-500 dark:ring-1 dark:shadow-md dark:shadow-[0px_0px_20px_10px_rgba(100,116,139,0.10)] shadow-md shadow-black mr-5;
+
+ }
