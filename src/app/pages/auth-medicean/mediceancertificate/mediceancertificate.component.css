@@ -1,0 +1,16 @@
+.upload-btn{
+  @apply  my-5 px-20  flex justify-center bg-green-500 text-gray-100 p-4  rounded-full tracking-wide;
+  @apply  font-semibold  focus:outline-none dark:bg-slate-900 dark:ring-1 dark:ring-slate-800;
+  @apply  hover:bg-blue-600  shadow-lg cursor-pointer transition ease-in duration-300;
+  @apply  sm:w-[30%]
+}
+
+.upload-box{
+  @apply  flex flex-col items-center justify-center rounded-md bg-indigo-50 ;
+  @apply  shadow-md shadow-slate-300; 
+  @apply  dark:bg-slate-800 dark:shadow-black; 
+  
+}
+.delete-btn{
+  @apply bg-green-500 px-3 py-1 rounded-md mx-auto my-2 text-white;
+}

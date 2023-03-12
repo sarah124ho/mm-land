@@ -1,0 +1,88 @@
+<div class=" flex flex-col ">
+    <app-section-title title=" تصاویر درخواستی" class="mb-3" titleClass="font-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 stroke-green-500">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
+
+    </app-section-title>
+    <div class=" flex flex-col mb-3 px-2">
+        <h1 class=" text-right text-sm "> تصویر پرسنلی</h1>
+        <h1 class=" text-right text-sm "> تصویر مدارک دانشگاهی</h1>
+
+    </div>
+    <app-section-title title="نحوه ارسال تصاویر" class="mb-3" titleClass="font-bold">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 stroke-green-500">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+
+    </app-section-title>
+    <div class=" flex flex-row-reverse  mb-3 px-2 space-x-reverse space-x-1">
+
+        <h1 class=" text-right text-sm ">
+            لطفا در کادر زیر روی ایکون <span class="text-green-500">+ </span> <span>کلیک و تصویر مورد نظر را انتخاب کنید
+                .سپس بعد از وارد کردن همه تصاویر دکمه ارسال را کلیک کنید</span>
+        </h1>
+
+
+    </div>
+    <app-file-upload (onFileUploaded)="fileUpload($event)">
+
+        <div class=" relative w-40 h-40" *ngFor="let image of ImageUpload;let index = index">
+            
+                <img class=" items-center w-40 h-40 object-fill " [src]="ImageUpload[index]">
+                <svg   class="stroke-green-400" (click)="removeSelectedFile(index)" viewBox="0 0 32 32" fill="none" aria-hidden="true"
+                    class="h-8 w-8 absolute inset-0 -mt-4 -ml-4">
+                    <path d="m13 13 6 6m0-6-6 6m15-3c0 6.627-5.373 12-12 12S4 22.627 4 16 9.373 4 16 4s12 5.373 12 12Z"
+                        stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+           
+        </div>
+    </app-file-upload>
+
+
+    <div class="grid grid-rows-2 sm:grid-rows-1 sm:grid-cols-2 sm:gap-2 sm:content-center my-2   ">
+
+        <div class=" sm:grow self-end mb-2">
+            <button type="submit" class="upload-btn" [ngClass]="(isImageSave ? '' : 'disabled' )"  (click)="sendUpload($event)">
+                ارسال
+            </button>
+
+        </div> 
+        <div class="px-2 self-end">
+            <div class="text-sm text-right  dark:text-slate-500  ">
+                <div class="pb-2 ">
+                    <h1 class=" font-bold text-base">شرایط فایل عکس که آن را باید ارسال کنید</h1>
+                </div>
+                <ul class="text-right leading-8 ">
+                    <li>
+                        <span>باشد (jpg يا jpeg پسوند)</span> <span> JPEJ </span><span class="text-right ">فایل عکس باید
+                            با
+                            فرمت </span>
+                        <span class="text-right text-red-400 ">*&nbsp;</span>
+                    </li>
+                    <li>
+                        <span class="text-right "> اندازه فایل عكس نباید کمتر از 200 کیلوبایت باشد </span><span
+                            class="text-right text-red-400">*&nbsp;</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+       
+
+    </div>
+
+
+
+
+
+
+
+
+   
+</div>

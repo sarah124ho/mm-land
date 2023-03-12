@@ -1,0 +1,6 @@
+.holder {
+    @apply  rounded-2xl overflow-hidden;
+    @apply  dark:bg-slate-900 dark:text-slate-200;
+    @apply  w-[50%] space-y-1 relative h-[30px] overflow-hidden;
+}
+
